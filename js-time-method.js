@@ -22,12 +22,21 @@ var beforeMonthFirstDay = function(){
 
 //取当前天数的前后多少天
 var nowAheadAfterDay = function(){
+    //此方法不是很完善，在面对30或者是31的时候会出错
     var dd = new Date(); 
     dd.setDate(dd.getDate()+AddDayCount);//获取AddDayCount天后的日期 
     var y = dd.getFullYear(); 
     var m = dd.getMonth()+1;//获取当前月份的日期 
     var d = dd.getDate(); 
     return seats(y) + seats(m) + seats(d);
+}
+
+
+// 获取前一天或者是后一天的时间
+var nowBeforeAfterDay = function(){
+    var  curDate = new Date();
+    var preDate = new Date(curDate.getTime() - 24*60*60*1000); //前一天
+    var nextDate = new Date(curDate.getTime() + 24*60*60*1000); //后一天 
 }
 
 //将字符串形式的日期转换成日期对象
