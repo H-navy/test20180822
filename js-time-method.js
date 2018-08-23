@@ -38,4 +38,7 @@ var stringChangeDay = function(strTime){
     var m = date.getMonth()+1;//获取当前月份的日期 
     var d = date.getDate(); 
     return y + m + d ;
+
 }
+//git提交测试
+
